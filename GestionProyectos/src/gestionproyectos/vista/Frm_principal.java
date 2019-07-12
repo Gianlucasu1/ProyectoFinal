@@ -18,8 +18,18 @@ public class Frm_principal extends javax.swing.JFrame implements PatronesDiseño
      */
     public Frm_principal() {
         initComponents();
+        setLocationRelativeTo(null);
+        
         pnl_buttons_admon2.setVisitador(this);
         pnl_buttons_empleado1.setVisitador(this);
+        pnl_crea_tareas1.setVisitador(this);
+        pnl_asignar_personas1.setVisitador(this);
+        pnl_ver_empleados1.setVisitador(this);
+        pnl_crear_empleados2.setVisitador(this);
+        pnl_crear_proyecto2.setVisitador(this);
+        pnl_consultar_proyectos1.setVisitador(this);
+        pnl_buttons_ingresar1.setVisitador(this);
+        panel_ingresar_id1.setVisitador(this);
     }
 
     /**
@@ -35,9 +45,17 @@ public class Frm_principal extends javax.swing.JFrame implements PatronesDiseño
         jButton1 = new javax.swing.JButton();
         pnl_principal = new javax.swing.JPanel();
         pnl_administrador1 = new gestionproyectos.vista.pnl_administrador();
+        pnl_crea_tareas1 = new gestionproyectos.vista.pnl_crea_tareas();
+        pnl_asignar_personas1 = new gestionproyectos.vista.pnl_asignar_personas();
+        pnl_ver_empleados1 = new gestionproyectos.vista.pnl_ver_empleados();
+        pnl_crear_empleados2 = new gestionproyectos.vista.pnl_crear_empleados();
+        pnl_crear_proyecto2 = new gestionproyectos.vista.pnl_crear_proyecto();
+        pnl_consultar_proyectos1 = new gestionproyectos.vista.pnl_consultar_proyectos();
+        panel_ingresar_id1 = new gestionproyectos.vista.panel_ingresar_id();
         pnl_buttons = new javax.swing.JPanel();
         pnl_buttons_admon2 = new gestionproyectos.vista.pnl_buttons_admon();
         pnl_buttons_empleado1 = new gestionproyectos.vista.pnl_buttons_empleado();
+        pnl_buttons_ingresar1 = new gestionproyectos.vista.pnl_buttons_ingresar();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -65,14 +83,22 @@ public class Frm_principal extends javax.swing.JFrame implements PatronesDiseño
         );
         pnl_administrador1Layout.setVerticalGroup(
             pnl_administrador1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 337, Short.MAX_VALUE)
+            .addGap(0, 350, Short.MAX_VALUE)
         );
 
-        pnl_principal.add(pnl_administrador1, "card2");
+        pnl_principal.add(pnl_administrador1, "PanelVacio");
+        pnl_principal.add(pnl_crea_tareas1, "CrearTareas");
+        pnl_principal.add(pnl_asignar_personas1, "AsignarPersonas");
+        pnl_principal.add(pnl_ver_empleados1, "VerEmpleados");
+        pnl_principal.add(pnl_crear_empleados2, "CrearEmpleados");
+        pnl_principal.add(pnl_crear_proyecto2, "CrearProyecto");
+        pnl_principal.add(pnl_consultar_proyectos1, "ConsultarProyectos");
+        pnl_principal.add(panel_ingresar_id1, "IngresarID");
 
         pnl_buttons.setLayout(new java.awt.CardLayout());
         pnl_buttons.add(pnl_buttons_admon2, "BotonesAdmon");
         pnl_buttons.add(pnl_buttons_empleado1, "BotonesEmpleado");
+        pnl_buttons.add(pnl_buttons_ingresar1, "BotonesIngresar");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -106,11 +132,13 @@ public class Frm_principal extends javax.swing.JFrame implements PatronesDiseño
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-    this.cambiarTarjeta("BotonesAdmon");    }//GEN-LAST:event_jButton1ActionPerformed
-
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-this.cambiarTarjeta("BotonesEmpleado");    }//GEN-LAST:event_jButton2ActionPerformed
+    cambiarTarjeta("BotonesIngresar");
+    }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    cambiarTarjeta("BotonesAdmon");
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -150,11 +178,19 @@ this.cambiarTarjeta("BotonesEmpleado");    }//GEN-LAST:event_jButton2ActionPerfo
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
+    private gestionproyectos.vista.panel_ingresar_id panel_ingresar_id1;
     private gestionproyectos.vista.pnl_administrador pnl_administrador1;
+    private gestionproyectos.vista.pnl_asignar_personas pnl_asignar_personas1;
     private javax.swing.JPanel pnl_buttons;
     private gestionproyectos.vista.pnl_buttons_admon pnl_buttons_admon2;
     private gestionproyectos.vista.pnl_buttons_empleado pnl_buttons_empleado1;
+    private gestionproyectos.vista.pnl_buttons_ingresar pnl_buttons_ingresar1;
+    private gestionproyectos.vista.pnl_consultar_proyectos pnl_consultar_proyectos1;
+    private gestionproyectos.vista.pnl_crea_tareas pnl_crea_tareas1;
+    private gestionproyectos.vista.pnl_crear_empleados pnl_crear_empleados2;
+    private gestionproyectos.vista.pnl_crear_proyecto pnl_crear_proyecto2;
     private javax.swing.JPanel pnl_principal;
+    private gestionproyectos.vista.pnl_ver_empleados pnl_ver_empleados1;
     // End of variables declaration//GEN-END:variables
 
     @Override
@@ -164,6 +200,6 @@ this.cambiarTarjeta("BotonesEmpleado");    }//GEN-LAST:event_jButton2ActionPerfo
 
     @Override
     public void CambiarTarjetaB(String tarjeta) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    ((CardLayout) pnl_principal.getLayout()).show(pnl_principal, tarjeta);
     }
 }

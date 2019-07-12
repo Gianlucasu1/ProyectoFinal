@@ -9,6 +9,6 @@ package gestionproyectos.modelo;
  *
  * @author gianlucasorem
  */
-class Tarea {
+public class Tarea {
     
 }
