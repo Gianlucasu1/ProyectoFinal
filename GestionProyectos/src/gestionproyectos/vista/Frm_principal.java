@@ -11,7 +11,7 @@ import java.awt.CardLayout;
  *
  * @author gianlucasorem
  */
-public class Frm_principal extends javax.swing.JFrame implements PatronesDiseño.PrincipalVisitador{
+public class Frm_principal extends javax.swing.JFrame implements Controlador.PrincipalVisitador{
 
     /**
      * Creates new form Frm_principal
@@ -137,7 +137,10 @@ public class Frm_principal extends javax.swing.JFrame implements PatronesDiseño
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-    cambiarTarjeta("BotonesAdmon");
+    
+        
+        cambiarTarjeta("BotonesAdmon");
+        
     }//GEN-LAST:event_jButton1ActionPerformed
 
     /**

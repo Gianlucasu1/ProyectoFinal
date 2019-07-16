@@ -5,7 +5,7 @@
  */
 package gestionproyectos.vista;
 
-import PatronesDiseño.PrincipalVisitador;
+import Controlador.PrincipalVisitador;
 
 /**
  *
@@ -52,7 +52,7 @@ public class pnl_consultar_proyectos extends javax.swing.JPanel implements Princ
                 {null, null, null, null}
             },
             new String [] {
-                "Proyecto", "Personas ", "Tareas", "Title 4"
+                "Proyecto", "Personas ", "Tareas", "Estados"
             }
         ));
         jScrollPane1.setViewportView(jTable1);

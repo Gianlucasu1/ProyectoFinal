@@ -5,20 +5,33 @@
  */
 package gestionproyectos.vista;
 
-import PatronesDiseño.PrincipalVisitador;
+import Controlador.PersonasJpaController;
+import Controlador.PrincipalVisitador;
+import entidades.Personas;
+import java.util.List;
+import javax.swing.JOptionPane;
+import javax.swing.table.DefaultTableModel;
 
 /**
  *
  * @author gianlucasorem
  */
 public class pnl_ver_empleados extends javax.swing.JPanel implements PrincipalVisitador{
+    
 
     /**
      * Creates new form pnl_ver_empleados
      */
     public pnl_ver_empleados() {
         initComponents();
+        
+        //cargarInformacion();
     }
+    
+    
+ 
+ 
+    
     public void setVisitador(PrincipalVisitador visitador) {
     this.visitador=visitador;
     }
@@ -33,37 +46,37 @@ public class pnl_ver_empleados extends javax.swing.JPanel implements PrincipalVi
     private void initComponents() {
 
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
+        tabla = new javax.swing.JTable();
         jButton1 = new javax.swing.JButton();
 
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+        tabla.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null},
-                {null},
-                {null},
-                {null},
-                {null},
-                {null},
-                {null},
-                {null},
-                {null},
-                {null},
-                {null},
-                {null},
-                {null},
-                {null},
-                {null},
-                {null},
-                {null},
-                {null},
-                {null},
-                {null}
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {}
             },
             new String [] {
-                "Empleados"
+
             }
         ));
-        jScrollPane1.setViewportView(jTable1);
+        jScrollPane1.setViewportView(tabla);
 
         jButton1.setText("Salir");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -105,9 +118,12 @@ public class pnl_ver_empleados extends javax.swing.JPanel implements PrincipalVi
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTable jTable1;
+    private javax.swing.JTable tabla;
     // End of variables declaration//GEN-END:variables
     private PrincipalVisitador visitador;
+    
+    
+   
 
     @Override
     public void cambiarTarjeta(String tarjeta) {

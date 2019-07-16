@@ -5,7 +5,7 @@
  */
 package gestionproyectos.vista;
 
-import PatronesDiseño.PrincipalVisitador;
+import Controlador.PrincipalVisitador;
 
 /**
  *
